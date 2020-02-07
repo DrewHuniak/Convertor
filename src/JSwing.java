@@ -7,6 +7,9 @@ import javax.swing.*;
 import javax.swing.text.JTextComponent;
 
 public class JSwing extends JFrame {
+	/**
+	 * 
+	 */
 	private JTabbedPane tabbed;
 	private JPanel panel1, panel2;
 	private JTextField text1, text2 , text3, text4, text5, text6, text7, text8, text9, text10, text11, text12, text13;
@@ -261,7 +264,7 @@ public class JSwing extends JFrame {
 	        }	
 			
 			
-			//test
+			
 			if(e.getSource() == eText1)
 			{				
 				num = Double.parseDouble(eText1.getText()) / 1000;
@@ -459,7 +462,7 @@ public class JSwing extends JFrame {
 			
 			
 			
-			
+			//Events for the mass tab
 			
 			if(e.getSource() == eText8)
 			{
