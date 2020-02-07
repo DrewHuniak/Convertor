@@ -1,22 +1,19 @@
-import java.awt.Component;
-import java.awt.FlowLayout;
+
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.text.Format;
-
 import javax.swing.*;
+import javax.swing.text.JTextComponent;
 
 public class JSwing extends JFrame {
 	private JTabbedPane tabbed;
 	private JPanel panel1, panel2;
-	private JTextField text1, text2 , text3, text4, text5, text6, text7;
-	private JTextField eText1, eText2, eText3, eText4, eText5, eText6, eText7;
+	private JTextField text1, text2 , text3, text4, text5, text6, text7, text8, text9, text10, text11, text12, text13;
+	private JTextField eText1, eText2, eText3, eText4, eText5, eText6, eText7, eText8, eText9, eText10, eText11, eText12, eText13;
 	public JSwing()
 	{
+		//Title
 		super("Converter");
 		
 		
@@ -26,128 +23,208 @@ public class JSwing extends JFrame {
 		panel1 = new JPanel(new GridBagLayout());
 		GridBagConstraints c = new GridBagConstraints();
 		ActionHandling h = new ActionHandling();
-	//	Verifier v = new Verifier();
+	
 		
+		
+		
+		//
+		// Distance TextFields
+		//
 		c.weightx = .2;
-		
-		
 		text1 = new JTextField("Meters");
 		text1.setEditable(false);
-		c.gridx = 0;
+		c.gridx = 0;							//Meters text field
 		c.gridy = 0;
 		panel1.add(text1, c);
-		
+											
 		eText1 = new JTextField("1");
 		c.fill = GridBagConstraints.HORIZONTAL;
-		c.gridx = 0;
+		c.gridx = 0;							//Editable Meters text field
 		c.gridy = -1;
-		//v.verify(eText1);
 		eText1.addKeyListener(h);
 		panel1.add(eText1, c);
 		
 		text2 = new JTextField("Kilometers");
 		text2.setEditable(false);
 		c.fill = GridBagConstraints.NONE;
-		c.gridx = 1;
+		c.gridx = 1;							//Kilometers text field
 		c.gridy = 0;
 		panel1.add(text2, c);
 		
 		eText2 = new JTextField("0.001");
 		c.fill = GridBagConstraints.HORIZONTAL;
-		c.gridx = 1;
+		c.gridx = 1;							//Editable Kilometers text field
 		c.gridy = -1;
 		eText2.addKeyListener(h);
 		panel1.add(eText2, c);
 		
 		text3 = new JTextField("Miles");
 		text3.setEditable(false);
-		c.fill = GridBagConstraints.NONE;
+		c.fill = GridBagConstraints.NONE;		//Miles text field 
 		c.gridx = 2;
 		c.gridy = 0;
 		panel1.add(text3, c);
 		
 		eText3 = new JTextField("0.00062150");
 		c.fill = GridBagConstraints.HORIZONTAL;
-		c.gridx = 2;
+		c.gridx = 2;							//Editable Miles text field
 		c.gridy = -1;
 		eText3.addKeyListener(h);
 		panel1.add(eText3, c);
 		
 		text4 = new JTextField("Feet");
 		text4.setEditable(false);
-		c.fill = GridBagConstraints.NONE;
+		c.fill = GridBagConstraints.NONE;		//Feet text field
 		c.gridx = 3;
 		c.gridy = 0;
 		panel1.add(text4, c);
 		
 		eText4 = new JTextField("3.281");
 		c.fill = GridBagConstraints.HORIZONTAL;
-		c.gridx = 3;
+		c.gridx = 3;							// Editable Feet text field
 		c.gridy = -1;
 		eText4.addKeyListener(h);
 		panel1.add(eText4, c);
 		
 		text5 = new JTextField("Inches");
 		text5.setEditable(false);
-		c.fill = GridBagConstraints.NONE;
+		c.fill = GridBagConstraints.NONE;		// Inches text field
 		c.gridx = 0;
 		c.gridy = -2;
 		panel1.add(text5, c);
 		
 		eText5 = new JTextField("39.37");
 		c.fill = GridBagConstraints.HORIZONTAL;
-		c.gridx = 0;
+		c.gridx = 0;							//Editable Inches text field
 		c.gridy = -4;
 		eText5.addKeyListener(h);
 		panel1.add(eText5, c);
 		
 		text6 = new JTextField("Light Years");
 		text6.setEditable(false);
-		c.fill = GridBagConstraints.NONE;
+		c.fill = GridBagConstraints.NONE;		//Light years text field
 		c.gridx = 1;
 		c.gridy = -2;
 		panel1.add(text6, c);
 		
 		eText6 = new JTextField("1.056970721911003E-16");
 		c.fill = GridBagConstraints.HORIZONTAL;
-		c.gridx = 1;
+		c.gridx = 1;							// Editable light years text field
 		c.gridy = -4;
 		eText6.addKeyListener(h);
 		panel1.add(eText6, c);
 		
 		text7 = new JTextField("Centimeters");
 		text7.setEditable(false);
-		c.fill = GridBagConstraints.NONE;
+		c.fill = GridBagConstraints.NONE;		//Centimeters text field
 		c.gridx = 2;
 		c.gridy = -2;
 		panel1.add(text7, c);
 		
 		eText7 = new JTextField("100");
 		c.fill = GridBagConstraints.HORIZONTAL;
-		c.gridx = 2;
+		c.gridx = 2;							//Editable Centimeters text field
 		c.gridy = -4;
 		eText7.addKeyListener(h);
 		panel1.add(eText7, c);
 		
 		
-		panel2 = new JPanel();
+		
+		//
+		//Weight panel
+		//
+		
+		panel2 = new JPanel(new GridBagLayout());
+		
+		text8 = new JTextField("Pounds");
+		c.fill = GridBagConstraints.NONE;
+		text8.setEditable(false);				//Pounds text field 
+		c.gridx = 0;
+		c.gridy = 0;
+		panel2.add(text8, c);
+		
+		eText8 = new JTextField("1");
+		c.fill = GridBagConstraints.HORIZONTAL;
+		c.gridx = 0;							//Editable pounds text field
+		c.gridy = -1;
+		eText8.addKeyListener(h);
+		panel2.add(eText8, c);
+		
+		text9 = new JTextField("Kilograms");
+		text9.setEditable(false);
+		c.fill = GridBagConstraints.NONE;
+		c.gridx = 1;							//Kilograms text field
+		c.gridy = 0;
+		panel2.add(text9, c);
+		
+		eText9 = new JTextField("");
+		c.fill = GridBagConstraints.HORIZONTAL;
+		c.gridx = 1;							//Editable Kilograms text field
+		c.gridy = -1;	
+		eText9.addKeyListener(h);
+		panel2.add(eText9, c);
+		
+		text10 = new JTextField("Grams");
+		text10.setEditable(false);
+		c.fill = GridBagConstraints.NONE;
+		c.gridx = 2;							//Grams text field
+		c.gridy = 0;
+		panel2.add(text10, c);
+		
+		eText10 = new JTextField("");
+		c.fill = GridBagConstraints.HORIZONTAL;
+		c.gridx = 2;							//Editable grams text field
+		c.gridy = -1;	
+		eText10.addKeyListener(h);
+		panel2.add(eText10, c);
+		
+		text11 = new JTextField("Ounce");
+		text11.setEditable(false);
+		c.fill = GridBagConstraints.NONE;
+		c.gridx = 3;							//Ounce text field
+		c.gridy = 0;
+		panel2.add(text11, c);
+		
+		eText11 = new JTextField("");
+		c.fill = GridBagConstraints.HORIZONTAL;
+		c.gridx = 3;							//Editable ounce text field
+		c.gridy = -1;
+		eText11.addKeyListener(h);
+		panel2.add(eText11, c);
+		
+		text12 = new JTextField("Milligram");
+		text12.setEditable(false);
+		c.fill = GridBagConstraints.NONE;		//Milligram text field
+		c.gridx = 0;
+		c.gridy = -2;
+		panel2.add(text12, c);
+		
+		eText12 = new JTextField("");
+		c.fill = GridBagConstraints.HORIZONTAL;
+		c.gridx = 0;							//Editable milligram text field
+		c.gridy = -4;
+		eText12.addKeyListener(h);
+		panel2.add(eText12, c);
+		
+		text13 = new JTextField("Micrograms");
+		text13.setEditable(false);
+		c.fill = GridBagConstraints.NONE;		//Microgram text field
+		c.gridx = 1;
+		c.gridy = -2;
+		panel2.add(text13, c);
+		
+		eText13 = new JTextField("");
+		c.fill = GridBagConstraints.HORIZONTAL;
+		c.gridx = 1;							// Editable mircogram text field
+		c.gridy = -4;
+		eText13.addKeyListener(h);
+		panel2.add(eText13, c);
 		
 		
 		
 		
 		tabbed.addTab("Distance", panel1);
 		tabbed.addTab("Weight", panel2);
-		
-		
-//		JTextField textField = (JTextField) comp;
-//        try {
-//          Integer.parseInt(textField.getText());
-//          returnValue = true;
-//        } catch (NumberFormatException e) {
-//          returnValue = false;
-//        }
-				
-		
 		
 	}
 	public class ActionHandling implements KeyListener
@@ -162,15 +239,30 @@ public class JSwing extends JFrame {
 		@Override
 		public void keyReleased(KeyEvent e) {
 			double num;
-		 //String regex = "[a-zA-Z]+"; 
-
+			double num2;
+			
+			
+			//Validate info entered in the text field so that only numbers can be entered
+			try {
+			
+				if(((JTextComponent) e.getSource()).getText().equals(""))
+				{		
+					
+				}
+				else
+				{
+					Double.parseDouble(((JTextComponent) e.getSource()).getText());				
+				}
+			} 
+		catch (NumberFormatException x) {
+	        	JOptionPane.showMessageDialog(panel1 ,"You must enter a number", "Error", JOptionPane.ERROR_MESSAGE);
+	        	((JTextComponent) e.getSource()).setText("");
+	        }	
+			
+			
+			
 			if(e.getSource() == eText1)
-			{	
-//				if(eText1.getText().matches(regex))
-//				{
-//					JOptionPane.showMessageDialog(panel1 ,"You must enter a number", "Error", JOptionPane.ERROR_MESSAGE);
-//				}
-				
+			{				
 				num = Double.parseDouble(eText1.getText()) / 1000;
 				String kilometers = String.valueOf(num);
 				eText2.setText(kilometers);
@@ -351,37 +443,155 @@ public class JSwing extends JFrame {
 				String lightYears = String.valueOf(num);
 				eText6.setText(lightYears);
 			}
+			if(e.getSource() == eText8)
+			{
+				num2 = Double.parseDouble(eText8.getText()) / 2.205;
+				String kilograms = String.format("%.8f", num2);
+				eText9.setText(kilograms);
+				
+				num2 = Double.parseDouble(eText8.getText()) * 454;
+				String grams = String.format("%.8f", num2);
+				eText10.setText(grams);
+				
+				num2 = Double.parseDouble(eText8.getText()) * 16;
+				String ounce = String.format("%.8f", num2);
+				eText11.setText(ounce);
+				
+				num2 = Double.parseDouble(eText8.getText()) * 453592;
+				String milligram = String.format("%.8f", num2);
+				eText12.setText(milligram);
+				
+				num2 = Double.parseDouble(eText8.getText()) * 4.536e+8;
+				String mircograms = String.format("%.8f", num2);
+				eText13.setText(mircograms);
+				
+			}
+			if(e.getSource() == eText9)
+			{
+				num2 = Double.parseDouble(eText9.getText()) * 2.205;
+				String pounds = String.format("%.8f", num2);
+				eText8.setText(pounds);
+				
+				num2 = Double.parseDouble(eText8.getText()) * 454;
+				String grams = String.format("%.8f", num2);
+				eText10.setText(grams);
+				
+				num2 = Double.parseDouble(eText8.getText()) * 16;
+				String ounce = String.format("%.8f", num2);
+				eText11.setText(ounce);
+				
+				num2 = Double.parseDouble(eText8.getText()) * 453592;
+				String milligram = String.format("%.8f", num2);
+				eText12.setText(milligram);
+				
+				num2 = Double.parseDouble(eText8.getText()) * 4.536e+8;
+				String mircograms = String.format("%.8f", num2);
+				eText13.setText(mircograms);
+				
+			}
+			if(e.getSource() == eText10)
+			{
+				num2 = Double.parseDouble(eText10.getText()) / 454;
+				String pounds = String.format("%.8f", num2);
+				eText8.setText(pounds);
+				
+				num2 = Double.parseDouble(eText8.getText()) / 2.205;
+				String kilograms = String.format("%.8f", num2);
+				eText9.setText(kilograms);
+				
+				num2 = Double.parseDouble(eText8.getText()) * 16;
+				String ounce = String.format("%.8f", num2);
+				eText11.setText(ounce);
+				
+				num2 = Double.parseDouble(eText8.getText()) * 453592;
+				String milligram = String.format("%.8f", num2);
+				eText12.setText(milligram);
+				
+				num2 = Double.parseDouble(eText8.getText()) * 4.536e+8;
+				String mircograms = String.format("%.8f", num2);
+				eText13.setText(mircograms);
+				
+			}
+			if(e.getSource() == eText11)
+			{
+				num2 = Double.parseDouble(eText11.getText()) / 16;
+				String pounds = String.format("%.8f", num2);
+				eText8.setText(pounds);
+				
+				num2 = Double.parseDouble(eText8.getText()) / 2.205;
+				String kilograms = String.format("%.8f", num2);
+				eText9.setText(kilograms);
+				
+				num2 = Double.parseDouble(eText8.getText()) * 454;
+				String grams = String.format("%.8f", num2);
+				eText10.setText(grams);
+				
+				num2 = Double.parseDouble(eText8.getText()) * 453592;
+				String milligram = String.format("%.8f", num2);
+				eText12.setText(milligram);
+				
+				num2 = Double.parseDouble(eText8.getText()) * 4.536e+8;
+				String mircograms = String.format("%.8f", num2);
+				eText13.setText(mircograms);
+				
+			}
+			if(e.getSource() == eText12)
+			{
+				num2 = Double.parseDouble(eText12.getText()) / 453592;
+				String pounds = String.format("%.8f", num2);
+				eText8.setText(pounds);
+				
+				num2 = Double.parseDouble(eText8.getText()) / 2.205;
+				String kilograms = String.format("%.8f", num2);
+				eText9.setText(kilograms);
+				
+				num2 = Double.parseDouble(eText8.getText()) * 454;
+				String grams = String.format("%.8f", num2);
+				eText10.setText(grams);
+				
+				num2 = Double.parseDouble(eText8.getText()) * 16;
+				String ounce = String.format("%.8f", num2);
+				eText11.setText(ounce);
+				
+				num2 = Double.parseDouble(eText8.getText()) * 4.536e+8;
+				String mircograms = String.format("%.8f", num2);
+				eText13.setText(mircograms);
+				
+			}
+			if(e.getSource() == eText13)
+			{
+				num2 = Double.parseDouble(eText13.getText()) / 4.536e+8;
+				String pounds = String.format("%.8f", num2);
+				eText8.setText(pounds);
+				
+				num2 = Double.parseDouble(eText8.getText()) / 2.205;
+				String kilograms = String.format("%.8f", num2);
+				eText9.setText(kilograms);
+				
+				num2 = Double.parseDouble(eText8.getText()) * 454;
+				String grams = String.format("%.8f", num2);
+				eText10.setText(grams);
+				
+				num2 = Double.parseDouble(eText8.getText()) * 16;
+				String ounce = String.format("%.8f", num2);
+				eText11.setText(ounce);
+				
+				num2 = Double.parseDouble(eText8.getText()) * 453592;
+				String milligram = String.format("%.8f", num2);
+				eText12.setText(milligram);
+				
+			}
+			
 	
 		}
 
 		@Override
 		public void keyTyped(KeyEvent e) {
-			
-//			 String regex = "[a-zA-Z]+"; 
-//			 if(eText1.getText().matches(regex))
-//					{
-//						JOptionPane.showMessageDialog(panel1 ,"You must enter a number", "Error", JOptionPane.ERROR_MESSAGE);
-//					}
+
 		}
 
 		}
-//	public class Verifier extends InputVerifier 
-//	{
-//
-//		@Override
-//		public boolean verify(JComponent input) {
-//			JTextField textField = (JTextField) input;
-//	        try {
-//	          Integer.parseInt(textField.getText());
-//	          return true;
-//	        } catch (NumberFormatException e) {
-//	        	JOptionPane.showMessageDialog(panel1 ,"You must enter a number", "Error", JOptionPane.ERROR_MESSAGE);
-//	          return false;
-//	        }
-//	
-//		}
-//		
-//	}
+
 	
 }
 
