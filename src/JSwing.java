@@ -260,7 +260,7 @@ public class JSwing extends JFrame {
 	        }	
 			
 			
-			
+			//test
 			if(e.getSource() == eText1)
 			{				
 				num = Double.parseDouble(eText1.getText()) / 1000;
