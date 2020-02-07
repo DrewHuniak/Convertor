@@ -131,7 +131,7 @@ public class JSwing extends JFrame {
 		
 		
 		//
-		//Weight panel
+		//Mass panel
 		//
 		
 		panel2 = new JPanel(new GridBagLayout());
@@ -157,7 +157,7 @@ public class JSwing extends JFrame {
 		c.gridy = 0;
 		panel2.add(text9, c);
 		
-		eText9 = new JTextField("");
+		eText9 = new JTextField("0.454");
 		c.fill = GridBagConstraints.HORIZONTAL;
 		c.gridx = 1;							//Editable Kilograms text field
 		c.gridy = -1;	
@@ -171,7 +171,7 @@ public class JSwing extends JFrame {
 		c.gridy = 0;
 		panel2.add(text10, c);
 		
-		eText10 = new JTextField("");
+		eText10 = new JTextField("454.000");
 		c.fill = GridBagConstraints.HORIZONTAL;
 		c.gridx = 2;							//Editable grams text field
 		c.gridy = -1;	
@@ -185,7 +185,7 @@ public class JSwing extends JFrame {
 		c.gridy = 0;
 		panel2.add(text11, c);
 		
-		eText11 = new JTextField("");
+		eText11 = new JTextField("16.000");
 		c.fill = GridBagConstraints.HORIZONTAL;
 		c.gridx = 3;							//Editable ounce text field
 		c.gridy = -1;
@@ -199,7 +199,7 @@ public class JSwing extends JFrame {
 		c.gridy = -2;
 		panel2.add(text12, c);
 		
-		eText12 = new JTextField("");
+		eText12 = new JTextField("453592.000");
 		c.fill = GridBagConstraints.HORIZONTAL;
 		c.gridx = 0;							//Editable milligram text field
 		c.gridy = -4;
@@ -213,7 +213,7 @@ public class JSwing extends JFrame {
 		c.gridy = -2;
 		panel2.add(text13, c);
 		
-		eText13 = new JTextField("");
+		eText13 = new JTextField("453600000.000");
 		c.fill = GridBagConstraints.HORIZONTAL;
 		c.gridx = 1;							// Editable mircogram text field
 		c.gridy = -4;
@@ -224,7 +224,7 @@ public class JSwing extends JFrame {
 		
 		
 		tabbed.addTab("Distance", panel1);
-		tabbed.addTab("Weight", panel2);
+		tabbed.addTab("Mass", panel2);
 		
 	}
 	public class ActionHandling implements KeyListener
@@ -240,7 +240,8 @@ public class JSwing extends JFrame {
 		public void keyReleased(KeyEvent e) {
 			double num;
 			double num2;
-			
+			String s;
+			String format = "%.3f";
 			
 			//Validate info entered in the text field so that only numbers can be entered
 			try {
@@ -264,321 +265,338 @@ public class JSwing extends JFrame {
 			if(e.getSource() == eText1)
 			{				
 				num = Double.parseDouble(eText1.getText()) / 1000;
-				String kilometers = String.valueOf(num);
-				eText2.setText(kilometers);
+				s = String.format(format, num);
+				eText2.setText(s);
 				
 				num = Double.parseDouble(eText1.getText()) / 1609;
-				String miles = String.format("%.8f", num);
-				eText3.setText(miles);
+				s = String.format(format, num);
+				eText3.setText(s);
 	
 				num = Double.parseDouble(eText1.getText()) * 3.281;
-				String feet = String.valueOf(num);
-				eText4.setText(feet);
+				s = String.format(format, num);
+				eText4.setText(s);
 				
 				num = Double.parseDouble(eText1.getText()) * 39.37;
-				String inches = String.format("%.2f",num);
-				eText5.setText(inches);
+				s = String.format(format, num);
+				eText5.setText(s);
 				
 				num = Double.parseDouble(eText1.getText()) / 9.461e+15;
-				String lightYears = String.valueOf(num);
-				eText6.setText(lightYears);
+				s = String.valueOf(num);
+				eText6.setText(s);
 				
 				num = Double.parseDouble(eText1.getText()) * 100;
-				String centimeters = String.valueOf(num);
-				eText7.setText(centimeters);
+				s = String.format(format, num);
+				eText7.setText(s);
 			}
 			if(e.getSource() == eText2)
 			{	
 				num = Double.parseDouble(eText2.getText()) * 1000;
-				String meters = String.valueOf(num);
-				eText1.setText(meters);
+				s = String.format(format, num);
+				eText1.setText(s);
 				
 				num = Double.parseDouble(eText1.getText()) / 1609;
-				String miles = String.format("%.8f", num);
-				eText3.setText(miles);
+				s = String.format(format, num);
+				eText3.setText(s);
 	
 				num = Double.parseDouble(eText1.getText()) * 3.281;
-				String feet = String.valueOf(num);
-				eText4.setText(feet);
+				s = String.format(format, num);
+				eText4.setText(s);
 				
 				num = Double.parseDouble(eText1.getText()) * 39.37;
-				String inches = String.format("%.2f",num);
-				eText5.setText(inches);
+				s = String.format(format, num);
+				eText5.setText(s);
 				
 				num = Double.parseDouble(eText1.getText()) / 9.461e+15;
-				String lightYears = String.valueOf(num);
-				eText6.setText(lightYears);
+				s = String.valueOf(num);
+				eText6.setText(s);
 				
 				num = Double.parseDouble(eText1.getText()) * 100;
-				String centimeters = String.valueOf(num);
-				eText7.setText(centimeters);
+				s = String.format(format, num);
+				eText7.setText(s);
 			}
 			if(e.getSource() == eText3)
 			{
 				num = Double.parseDouble(eText3.getText()) * 1609;
-				String meters = String.valueOf(num);
-				eText1.setText(meters);
+				s = String.format(format, num);
+				eText1.setText(s);
 				
 				num = Double.parseDouble(eText1.getText()) / 1000;
-				String kilometers = String.valueOf(num);
-				eText2.setText(kilometers);
+				s = String.format(format, num);
+				eText2.setText(s);
 	
 				num = Double.parseDouble(eText1.getText()) * 3.281;
-				String feet = String.valueOf(num);
-				eText4.setText(feet);
+				s = String.format(format, num);
+				eText4.setText(s);
 				
 				num = Double.parseDouble(eText1.getText()) * 39.37;
-				String inches = String.format("%.2f",num);
-				eText5.setText(inches);
+				s = String.format(format, num);
+				eText5.setText(s);
 				
 				num = Double.parseDouble(eText1.getText()) / 9.461e+15;
-				String lightYears = String.valueOf(num);
-				eText6.setText(lightYears);
+				s = String.valueOf(num);
+				eText6.setText(s);
 				
 				num = Double.parseDouble(eText1.getText()) * 100;
-				String centimeters = String.valueOf(num);
-				eText7.setText(centimeters);
+				s = String.format(format, num);
+				eText7.setText(s);
 			}
 			if(e.getSource() == eText4)
 			{
 				num = Double.parseDouble(eText4.getText()) / 3.281;
-				String meters = String.valueOf(num);
-				eText1.setText(meters);
+				s = String.format("%.5f", num);
+				eText1.setText(s);
 				
 				num = Double.parseDouble(eText1.getText()) / 1000;
-				String kilometers = String.valueOf(num);
-				eText2.setText(kilometers);
+				s = String.format("%.5f", num);
+				eText2.setText(s);
 				
 				num = Double.parseDouble(eText1.getText()) / 1609;
-				String miles = String.format("%.8f", num);
-				eText3.setText(miles);
+				s = String.format("%.5f", num);
+				eText3.setText(s);
 				
-				num = Double.parseDouble(eText1.getText()) * 39.37;
-				String inches = String.format("%.2f",num);
-				eText5.setText(inches);
+				num = Double.parseDouble(eText4.getText()) * 12;	//
+				s = String.format("%.5f", num);
+				eText5.setText(s);
 				
 				num = Double.parseDouble(eText1.getText()) / 9.461e+15;
-				String lightYears = String.valueOf(num);
-				eText6.setText(lightYears);
+				s = String.valueOf(num);
+				eText6.setText(s);
 				
 				num = Double.parseDouble(eText1.getText()) * 100;
-				String centimeters = String.valueOf(num);
-				eText7.setText(centimeters);
+				s = String.format("%.5f", num);
+				eText7.setText(s);
 			}
 			if(e.getSource() == eText5)
 			{
 				num = Double.parseDouble(eText5.getText()) / 39.37;
-				String meters = String.valueOf(num);
-				eText1.setText(meters);
+				s = String.format("%.5f", num);
+				eText1.setText(s);
 				
 				num = Double.parseDouble(eText1.getText()) / 1000;
-				String kilometers = String.valueOf(num);
-				eText2.setText(kilometers);
+				s = String.format("%.5f", num);
+				eText2.setText(s);
 				
 				num = Double.parseDouble(eText1.getText()) / 1609;
-				String miles = String.format("%.8f", num);
-				eText3.setText(miles);
+				s = String.format("%.5f", num);
+				eText3.setText(s);
 	
 				num = Double.parseDouble(eText1.getText()) * 3.281;
-				String feet = String.valueOf(num);
-				eText4.setText(feet);
+				s = String.format("%.5f", num);
+				eText4.setText(s);
 				
 				num = Double.parseDouble(eText1.getText()) / 9.461e+15;
-				String lightYears = String.valueOf(num);
-				eText6.setText(lightYears);
+				s = String.valueOf(num);
+				eText6.setText(s);
 				
 				num = Double.parseDouble(eText1.getText()) * 100;
-				String centimeters = String.valueOf(num);
-				eText7.setText(centimeters);
+				s = String.format("%.5f", num);
+				eText7.setText(s);
 			}
 			if(e.getSource() == eText6)
 			{
 				num = Double.parseDouble(eText6.getText()) * 9.461e+15;
-				String meters = String.valueOf(num);
-				eText1.setText(meters);
+				s = String.valueOf(num);
+				eText1.setText(s);
 				
 				num = Double.parseDouble(eText1.getText()) / 1000;
-				String kilometers = String.valueOf(num);
-				eText2.setText(kilometers);
+				s = String.format(format, num);
+				eText2.setText(s);
 				
 				num = Double.parseDouble(eText1.getText()) / 1609;
-				String miles = String.format("%.8f", num);
-				eText3.setText(miles);
+				s = String.format(format, num);;
+				eText3.setText(s);
 	
 				num = Double.parseDouble(eText1.getText()) * 3.281;
-				String feet = String.valueOf(num);
-				eText4.setText(feet);
+				s = String.format(format, num);
+				eText4.setText(s);
 				
 				num = Double.parseDouble(eText1.getText()) * 39.37;
-				String inches = String.format("%.2f",num);
-				eText5.setText(inches);
+				s = String.format(format, num);
+				eText5.setText(s);
 				
 				num = Double.parseDouble(eText1.getText()) * 100;
-				String centimeters = String.valueOf(num);
-				eText7.setText(centimeters);
+				s = String.format(format, num);
+				eText7.setText(s);
 			}
 			if(e.getSource() == eText7)
 			{
 				num = Double.parseDouble(eText7.getText()) / 100;
-				String meters = String.valueOf(num);
-				eText1.setText(meters);
+				s = String.format("%.6f", num);
+				eText1.setText(s);
 				
 				num = Double.parseDouble(eText1.getText()) / 1000;
-				String kilometers = String.valueOf(num);
-				eText2.setText(kilometers);
+				s = String.format("%.6f", num);
+				eText2.setText(s);
 				
 				num = Double.parseDouble(eText1.getText()) / 1609;
-				String miles = String.format("%.8f", num);
-				eText3.setText(miles);
+				s = String.format("%.6f", num);
+				eText3.setText(s);
 	
 				num = Double.parseDouble(eText1.getText()) * 3.281;
-				String feet = String.valueOf(num);
-				eText4.setText(feet);
+				s = String.format("%.6f", num);
+				eText4.setText(s);
 				
 				num = Double.parseDouble(eText1.getText()) * 39.37;
-				String inches = String.format("%.2f",num);
-				eText5.setText(inches);
+				s = String.format("%.6f", num);
+				eText5.setText(s);
 				
 				num = Double.parseDouble(eText1.getText()) / 9.461e+15;
-				String lightYears = String.valueOf(num);
-				eText6.setText(lightYears);
+				s = String.valueOf(num);
+				eText6.setText(s);
 			}
+			
+		
+			
+		////////////////////////////////////////////////	
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 			if(e.getSource() == eText8)
 			{
 				num2 = Double.parseDouble(eText8.getText()) / 2.205;
-				String kilograms = String.format("%.8f", num2);
-				eText9.setText(kilograms);
+				s = String.format(format ,num2);
+				eText9.setText(s);
 				
 				num2 = Double.parseDouble(eText8.getText()) * 454;
-				String grams = String.format("%.8f", num2);
-				eText10.setText(grams);
+				s = String.format(format ,num2);
+				eText10.setText(s);
 				
 				num2 = Double.parseDouble(eText8.getText()) * 16;
-				String ounce = String.format("%.8f", num2);
-				eText11.setText(ounce);
+				s = String.format(format ,num2);
+				eText11.setText(s);
 				
 				num2 = Double.parseDouble(eText8.getText()) * 453592;
-				String milligram = String.format("%.8f", num2);
-				eText12.setText(milligram);
+				s = String.format(format ,num2);
+				eText12.setText(s);
 				
 				num2 = Double.parseDouble(eText8.getText()) * 4.536e+8;
-				String mircograms = String.format("%.8f", num2);
-				eText13.setText(mircograms);
+				s = String.format(format ,num2);
+				eText13.setText(s);
 				
 			}
 			if(e.getSource() == eText9)
 			{
 				num2 = Double.parseDouble(eText9.getText()) * 2.205;
-				String pounds = String.format("%.8f", num2);
-				eText8.setText(pounds);
+				s = String.format(format ,num2);
+				eText8.setText(s);
 				
-				num2 = Double.parseDouble(eText8.getText()) * 454;
-				String grams = String.format("%.8f", num2);
-				eText10.setText(grams);
+				num2 = Double.parseDouble(eText9.getText()) * 1000;
+				s = String.format(format ,num2);
+				eText10.setText(s);
 				
 				num2 = Double.parseDouble(eText8.getText()) * 16;
-				String ounce = String.format("%.8f", num2);
-				eText11.setText(ounce);
+				s = String.format(format ,num2);
+				eText11.setText(s);
 				
 				num2 = Double.parseDouble(eText8.getText()) * 453592;
-				String milligram = String.format("%.8f", num2);
-				eText12.setText(milligram);
+				s = String.format(format ,num2);
+				eText12.setText(s);
 				
 				num2 = Double.parseDouble(eText8.getText()) * 4.536e+8;
-				String mircograms = String.format("%.8f", num2);
-				eText13.setText(mircograms);
+				s = String.format(format ,num2);
+				eText13.setText(s);
 				
 			}
 			if(e.getSource() == eText10)
 			{
 				num2 = Double.parseDouble(eText10.getText()) / 454;
-				String pounds = String.format("%.8f", num2);
-				eText8.setText(pounds);
+				s = String.format(format ,num2);
+				eText8.setText(s);
 				
 				num2 = Double.parseDouble(eText8.getText()) / 2.205;
-				String kilograms = String.format("%.8f", num2);
-				eText9.setText(kilograms);
+				s = String.format(format ,num2);
+				eText9.setText(s);
 				
 				num2 = Double.parseDouble(eText8.getText()) * 16;
-				String ounce = String.format("%.8f", num2);
-				eText11.setText(ounce);
+				s = String.format(format ,num2);
+				eText11.setText(s);
 				
 				num2 = Double.parseDouble(eText8.getText()) * 453592;
-				String milligram = String.format("%.8f", num2);
-				eText12.setText(milligram);
+				s = String.format(format ,num2);
+				eText12.setText(s);
 				
 				num2 = Double.parseDouble(eText8.getText()) * 4.536e+8;
-				String mircograms = String.format("%.8f", num2);
-				eText13.setText(mircograms);
+				s = String.format(format ,num2);
+				eText13.setText(s);
 				
 			}
 			if(e.getSource() == eText11)
 			{
 				num2 = Double.parseDouble(eText11.getText()) / 16;
-				String pounds = String.format("%.8f", num2);
-				eText8.setText(pounds);
+				s = String.format(format ,num2);
+				eText8.setText(s);
 				
 				num2 = Double.parseDouble(eText8.getText()) / 2.205;
-				String kilograms = String.format("%.8f", num2);
-				eText9.setText(kilograms);
+				s = String.format(format ,num2);
+				eText9.setText(s);
 				
 				num2 = Double.parseDouble(eText8.getText()) * 454;
-				String grams = String.format("%.8f", num2);
-				eText10.setText(grams);
+				s = String.format(format ,num2);
+				eText10.setText(s);
 				
 				num2 = Double.parseDouble(eText8.getText()) * 453592;
-				String milligram = String.format("%.8f", num2);
-				eText12.setText(milligram);
+				s = String.format(format ,num2);
+				eText12.setText(s);
 				
 				num2 = Double.parseDouble(eText8.getText()) * 4.536e+8;
-				String mircograms = String.format("%.8f", num2);
-				eText13.setText(mircograms);
+				s = String.format(format ,num2);
+				eText13.setText(s);
 				
 			}
 			if(e.getSource() == eText12)
 			{
 				num2 = Double.parseDouble(eText12.getText()) / 453592;
-				String pounds = String.format("%.8f", num2);
-				eText8.setText(pounds);
+				s = String.format("%.10f" ,num2);
+				eText8.setText(s);
 				
 				num2 = Double.parseDouble(eText8.getText()) / 2.205;
-				String kilograms = String.format("%.8f", num2);
-				eText9.setText(kilograms);
+				s = String.format("%.10f" ,num2);
+				eText9.setText(s);
 				
 				num2 = Double.parseDouble(eText8.getText()) * 454;
-				String grams = String.format("%.8f", num2);
-				eText10.setText(grams);
+				s = String.format("%.10f" ,num2);
+				eText10.setText(s);
 				
 				num2 = Double.parseDouble(eText8.getText()) * 16;
-				String ounce = String.format("%.8f", num2);
-				eText11.setText(ounce);
+				s = String.format("%.10f" ,num2);
+				eText11.setText(s);
 				
 				num2 = Double.parseDouble(eText8.getText()) * 4.536e+8;
-				String mircograms = String.format("%.8f", num2);
-				eText13.setText(mircograms);
+				s = String.format("%.10f" ,num2);
+				eText13.setText(s);
 				
 			}
 			if(e.getSource() == eText13)
 			{
 				num2 = Double.parseDouble(eText13.getText()) / 4.536e+8;
-				String pounds = String.format("%.8f", num2);
-				eText8.setText(pounds);
+				s = String.format("%.10f" ,num2);
+				eText8.setText(s);
 				
 				num2 = Double.parseDouble(eText8.getText()) / 2.205;
-				String kilograms = String.format("%.8f", num2);
-				eText9.setText(kilograms);
+				s = String.format("%.10f" ,num2);
+				eText9.setText(s);
 				
 				num2 = Double.parseDouble(eText8.getText()) * 454;
-				String grams = String.format("%.8f", num2);
-				eText10.setText(grams);
+				s = String.format("%.10f" ,num2);
+				eText10.setText(s);
 				
 				num2 = Double.parseDouble(eText8.getText()) * 16;
-				String ounce = String.format("%.8f", num2);
-				eText11.setText(ounce);
+				s = String.format("%.10f" ,num2);
+				eText11.setText(s);
 				
 				num2 = Double.parseDouble(eText8.getText()) * 453592;
-				String milligram = String.format("%.8f", num2);
-				eText12.setText(milligram);
+				s = String.format("%.10f" ,num2);
+				eText12.setText(s);
 				
 			}
 			
