@@ -265,345 +265,360 @@ public class JSwing extends JFrame {
 			
 			
 			
-			if(e.getSource() == eText1)
-			{				
-				num = Double.parseDouble(eText1.getText()) / 1000;
-				s = String.format(format, num);
-				eText2.setText(s);
-				
-				num = Double.parseDouble(eText1.getText()) / 1609;
-				s = String.format(format, num);
-				eText3.setText(s);
-	
-				num = Double.parseDouble(eText1.getText()) * 3.281;
-				s = String.format(format, num);
-				eText4.setText(s);
-				
-				num = Double.parseDouble(eText1.getText()) * 39.37;
-				s = String.format(format, num);
-				eText5.setText(s);
-				
-				num = Double.parseDouble(eText1.getText()) / 9.461e+15;
-				s = String.valueOf(num);
-				eText6.setText(s);
-				
-				num = Double.parseDouble(eText1.getText()) * 100;
-				s = String.format(format, num);
-				eText7.setText(s);
-			}
-			if(e.getSource() == eText2)
-			{	
-				num = Double.parseDouble(eText2.getText()) * 1000;
-				s = String.format(format, num);
-				eText1.setText(s);
-				
-				num = Double.parseDouble(eText1.getText()) / 1609;
-				s = String.format(format, num);
-				eText3.setText(s);
-	
-				num = Double.parseDouble(eText1.getText()) * 3.281;
-				s = String.format(format, num);
-				eText4.setText(s);
-				
-				num = Double.parseDouble(eText1.getText()) * 39.37;
-				s = String.format(format, num);
-				eText5.setText(s);
-				
-				num = Double.parseDouble(eText1.getText()) / 9.461e+15;
-				s = String.valueOf(num);
-				eText6.setText(s);
-				
-				num = Double.parseDouble(eText1.getText()) * 100;
-				s = String.format(format, num);
-				eText7.setText(s);
-			}
-			if(e.getSource() == eText3)
+			
+			//This IF/Else statement sets all the text fields in the tab to blank if one of the text fields in the tab is blank.
+			if(e.getSource().equals(eText1)||e.getSource().equals(eText2)||e.getSource().equals(eText3)||e.getSource().equals(eText4)||e.getSource().equals(eText5)||e.getSource().equals(eText6)||e.getSource().equals(eText7))
 			{
-				num = Double.parseDouble(eText3.getText()) * 1609;
-				s = String.format(format, num);
-				eText1.setText(s);
-				
-				num = Double.parseDouble(eText1.getText()) / 1000;
-				s = String.format(format, num);
-				eText2.setText(s);
-	
-				num = Double.parseDouble(eText1.getText()) * 3.281;
-				s = String.format(format, num);
-				eText4.setText(s);
-				
-				num = Double.parseDouble(eText1.getText()) * 39.37;
-				s = String.format(format, num);
-				eText5.setText(s);
-				
-				num = Double.parseDouble(eText1.getText()) / 9.461e+15;
-				s = String.valueOf(num);
-				eText6.setText(s);
-				
-				num = Double.parseDouble(eText1.getText()) * 100;
-				s = String.format(format, num);
-				eText7.setText(s);
+				if(((JTextComponent) e.getSource()).getText().equals(""))
+				{	eText1.setText("");
+					eText2.setText("");
+					eText3.setText("");
+					eText4.setText("");
+					eText5.setText("");
+					eText6.setText("");
+					eText7.setText("");
+				}
+				else
+				{
+					if(e.getSource() == eText1)
+					{				
+						num = Double.parseDouble(eText1.getText()) / 1000;
+						s = String.format(format, num);
+						eText2.setText(s);
+						
+						num = Double.parseDouble(eText1.getText()) / 1609;
+						s = String.format(format, num);
+						eText3.setText(s);
+			
+						num = Double.parseDouble(eText1.getText()) * 3.281;
+						s = String.format(format, num);
+						eText4.setText(s);
+						
+						num = Double.parseDouble(eText1.getText()) * 39.37;
+						s = String.format(format, num);
+						eText5.setText(s);
+						
+						num = Double.parseDouble(eText1.getText()) / 9.461e+15;
+						s = String.valueOf(num);
+						eText6.setText(s);
+						
+						num = Double.parseDouble(eText1.getText()) * 100;
+						s = String.format(format, num);
+						eText7.setText(s);
+					}
+					if(e.getSource() == eText2)
+					{	
+						num = Double.parseDouble(eText2.getText()) * 1000;
+						s = String.format(format, num);
+						eText1.setText(s);
+						
+						num = Double.parseDouble(eText1.getText()) / 1609;
+						s = String.format(format, num);
+						eText3.setText(s);
+			
+						num = Double.parseDouble(eText1.getText()) * 3.281;
+						s = String.format(format, num);
+						eText4.setText(s);
+						
+						num = Double.parseDouble(eText1.getText()) * 39.37;
+						s = String.format(format, num);
+						eText5.setText(s);
+						
+						num = Double.parseDouble(eText1.getText()) / 9.461e+15;
+						s = String.valueOf(num);
+						eText6.setText(s);
+						
+						num = Double.parseDouble(eText1.getText()) * 100;
+						s = String.format(format, num);
+						eText7.setText(s);
+					}
+					if(e.getSource() == eText3)
+					{
+						num = Double.parseDouble(eText3.getText()) * 1609;
+						s = String.format(format, num);
+						eText1.setText(s);
+						
+						num = Double.parseDouble(eText1.getText()) / 1000;
+						s = String.format(format, num);
+						eText2.setText(s);
+			
+						num = Double.parseDouble(eText3.getText()) * 5280;
+						s = String.format(format, num);
+						eText4.setText(s);
+						
+						num = Double.parseDouble(eText3.getText()) * 63360;
+						s = String.format(format, num);
+						eText5.setText(s);
+						
+						num = Double.parseDouble(eText1.getText()) / 9.461e+15;
+						s = String.valueOf(num);
+						eText6.setText(s);
+						
+						num = Double.parseDouble(eText3.getText()) * 160934;
+						s = String.format(format, num);
+						eText7.setText(s);
+					}
+					if(e.getSource() == eText4)
+					{
+						num = Double.parseDouble(eText4.getText()) / 3.281;
+						s = String.format("%.5f", num);
+						eText1.setText(s);
+						
+						num = Double.parseDouble(eText1.getText()) / 1000;
+						s = String.format("%.5f", num);
+						eText2.setText(s);
+						
+						num = Double.parseDouble(eText1.getText()) / 1609;
+						s = String.format("%.5f", num);
+						eText3.setText(s);
+						
+						num = Double.parseDouble(eText4.getText()) * 12;	//
+						s = String.format("%.5f", num);
+						eText5.setText(s);
+						
+						num = Double.parseDouble(eText1.getText()) / 9.461e+15;
+						s = String.valueOf(num);
+						eText6.setText(s);
+						
+						num = Double.parseDouble(eText1.getText()) * 100;
+						s = String.format("%.5f", num);
+						eText7.setText(s);
+					}
+					if(e.getSource() == eText5)
+					{
+						num = Double.parseDouble(eText5.getText()) / 39.37;
+						s = String.format("%.5f", num);
+						eText1.setText(s);
+						
+						num = Double.parseDouble(eText1.getText()) / 1000;
+						s = String.format("%.5f", num);
+						eText2.setText(s);
+						
+						num = Double.parseDouble(eText1.getText()) / 1609;
+						s = String.format("%.5f", num);
+						eText3.setText(s);
+			
+						num = Double.parseDouble(eText1.getText()) * 3.281;
+						s = String.format("%.5f", num);
+						eText4.setText(s);
+						
+						num = Double.parseDouble(eText1.getText()) / 9.461e+15;
+						s = String.valueOf(num);
+						eText6.setText(s);
+						
+						num = Double.parseDouble(eText1.getText()) * 100;
+						s = String.format("%.5f", num);
+						eText7.setText(s);
+					}
+					if(e.getSource() == eText6)
+					{
+						num = Double.parseDouble(eText6.getText()) * 9.461e+15;
+						s = String.valueOf(num);
+						eText1.setText(s);
+						
+						num = Double.parseDouble(eText1.getText()) / 1000;
+						s = String.format(format, num);
+						eText2.setText(s);
+						
+						num = Double.parseDouble(eText1.getText()) / 1609;
+						s = String.format(format, num);;
+						eText3.setText(s);
+			
+						num = Double.parseDouble(eText1.getText()) * 3.281;
+						s = String.format(format, num);
+						eText4.setText(s);
+						
+						num = Double.parseDouble(eText1.getText()) * 39.37;
+						s = String.format(format, num);
+						eText5.setText(s);
+						
+						num = Double.parseDouble(eText1.getText()) * 100;
+						s = String.format(format, num);
+						eText7.setText(s);
+					}
+					if(e.getSource() == eText7)
+					{
+						num = Double.parseDouble(eText7.getText()) / 100;
+						s = String.format("%.6f", num);
+						eText1.setText(s);
+						
+						num = Double.parseDouble(eText1.getText()) / 1000;
+						s = String.format("%.6f", num);
+						eText2.setText(s);
+						
+						num = Double.parseDouble(eText1.getText()) / 1609;
+						s = String.format("%.6f", num);
+						eText3.setText(s);
+			
+						num = Double.parseDouble(eText1.getText()) * 3.281;
+						s = String.format("%.6f", num);
+						eText4.setText(s);
+						
+						num = Double.parseDouble(eText1.getText()) * 39.37;
+						s = String.format("%.6f", num);
+						eText5.setText(s);
+						
+						num = Double.parseDouble(eText1.getText()) / 9.461e+15;
+						s = String.valueOf(num);
+						eText6.setText(s);
+					}
+				}
 			}
-			if(e.getSource() == eText4)
+			else
 			{
-				num = Double.parseDouble(eText4.getText()) / 3.281;
-				s = String.format("%.5f", num);
-				eText1.setText(s);
-				
-				num = Double.parseDouble(eText1.getText()) / 1000;
-				s = String.format("%.5f", num);
-				eText2.setText(s);
-				
-				num = Double.parseDouble(eText1.getText()) / 1609;
-				s = String.format("%.5f", num);
-				eText3.setText(s);
-				
-				num = Double.parseDouble(eText4.getText()) * 12;	//
-				s = String.format("%.5f", num);
-				eText5.setText(s);
-				
-				num = Double.parseDouble(eText1.getText()) / 9.461e+15;
-				s = String.valueOf(num);
-				eText6.setText(s);
-				
-				num = Double.parseDouble(eText1.getText()) * 100;
-				s = String.format("%.5f", num);
-				eText7.setText(s);
+				if(((JTextComponent) e.getSource()).getText().equals(""))
+				{
+					eText8.setText("");
+					eText9.setText("");
+					eText10.setText("");
+					eText11.setText("");
+					eText12.setText("");
+					eText13.setText("");			
+				}
+				else
+				{
+					if(e.getSource() == eText8)
+					{
+						num2 = Double.parseDouble(eText8.getText()) / 2.205;
+						s = String.format(format ,num2);
+						eText9.setText(s);
+						
+						num2 = Double.parseDouble(eText8.getText()) * 454;
+						s = String.format(format ,num2);
+						eText10.setText(s);
+						
+						num2 = Double.parseDouble(eText8.getText()) * 16;
+						s = String.format(format ,num2);
+						eText11.setText(s);
+						
+						num2 = Double.parseDouble(eText8.getText()) * 453592;
+						s = String.format(format ,num2);
+						eText12.setText(s);
+						
+						num2 = Double.parseDouble(eText8.getText()) * 4.536e+8;
+						s = String.format(format ,num2);
+						eText13.setText(s);
+						
+					}
+					if(e.getSource() == eText9)
+					{
+						num2 = Double.parseDouble(eText9.getText()) * 2.205;
+						s = String.format(format ,num2);
+						eText8.setText(s);
+						
+						num2 = Double.parseDouble(eText9.getText()) * 1000;
+						s = String.format(format ,num2);
+						eText10.setText(s);
+						
+						num2 = Double.parseDouble(eText8.getText()) * 16;
+						s = String.format(format ,num2);
+						eText11.setText(s);
+						
+						num2 = Double.parseDouble(eText8.getText()) * 453592;
+						s = String.format(format ,num2);
+						eText12.setText(s);
+						
+						num2 = Double.parseDouble(eText8.getText()) * 4.536e+8;
+						s = String.format(format ,num2);
+						eText13.setText(s);
+						
+					}
+					if(e.getSource() == eText10)
+					{
+						num2 = Double.parseDouble(eText10.getText()) / 454;
+						s = String.format(format ,num2);
+						eText8.setText(s);
+						
+						num2 = Double.parseDouble(eText8.getText()) / 2.205;
+						s = String.format(format ,num2);
+						eText9.setText(s);
+						
+						num2 = Double.parseDouble(eText8.getText()) * 16;
+						s = String.format(format ,num2);
+						eText11.setText(s);
+						
+						num2 = Double.parseDouble(eText8.getText()) * 453592;
+						s = String.format(format ,num2);
+						eText12.setText(s);
+						
+						num2 = Double.parseDouble(eText8.getText()) * 4.536e+8;
+						s = String.format(format ,num2);
+						eText13.setText(s);
+						
+					}
+					if(e.getSource() == eText11)
+					{
+						num2 = Double.parseDouble(eText11.getText()) / 16;
+						s = String.format(format ,num2);
+						eText8.setText(s);
+						
+						num2 = Double.parseDouble(eText8.getText()) / 2.205;
+						s = String.format(format ,num2);
+						eText9.setText(s);
+						
+						num2 = Double.parseDouble(eText8.getText()) * 454;
+						s = String.format(format ,num2);
+						eText10.setText(s);
+						
+						num2 = Double.parseDouble(eText8.getText()) * 453592;
+						s = String.format(format ,num2);
+						eText12.setText(s);
+						
+						num2 = Double.parseDouble(eText8.getText()) * 4.536e+8;
+						s = String.format(format ,num2);
+						eText13.setText(s);
+						
+					}
+					if(e.getSource() == eText12)
+					{
+						num2 = Double.parseDouble(eText12.getText()) / 453592;
+						s = String.format("%.10f" ,num2);
+						eText8.setText(s);
+						
+						num2 = Double.parseDouble(eText8.getText()) / 2.205;
+						s = String.format("%.10f" ,num2);
+						eText9.setText(s);
+						
+						num2 = Double.parseDouble(eText8.getText()) * 454;
+						s = String.format("%.10f" ,num2);
+						eText10.setText(s);
+						
+						num2 = Double.parseDouble(eText8.getText()) * 16;
+						s = String.format("%.10f" ,num2);
+						eText11.setText(s);
+						
+						num2 = Double.parseDouble(eText8.getText()) * 4.536e+8;
+						s = String.format("%.10f" ,num2);
+						eText13.setText(s);
+						
+					}
+					if(e.getSource() == eText13)
+					{
+						num2 = Double.parseDouble(eText13.getText()) / 4.536e+8;
+						s = String.format("%.10f" ,num2);
+						eText8.setText(s);
+						
+						num2 = Double.parseDouble(eText8.getText()) / 2.205;
+						s = String.format("%.10f" ,num2);
+						eText9.setText(s);
+						
+						num2 = Double.parseDouble(eText8.getText()) * 454;
+						s = String.format("%.10f" ,num2);
+						eText10.setText(s);
+						
+						num2 = Double.parseDouble(eText8.getText()) * 16;
+						s = String.format("%.10f" ,num2);
+						eText11.setText(s);
+						
+						num2 = Double.parseDouble(eText8.getText()) * 453592;
+						s = String.format("%.10f" ,num2);
+						eText12.setText(s);
+						
+					}
+				}
+
 			}
-			if(e.getSource() == eText5)
-			{
-				num = Double.parseDouble(eText5.getText()) / 39.37;
-				s = String.format("%.5f", num);
-				eText1.setText(s);
 				
-				num = Double.parseDouble(eText1.getText()) / 1000;
-				s = String.format("%.5f", num);
-				eText2.setText(s);
-				
-				num = Double.parseDouble(eText1.getText()) / 1609;
-				s = String.format("%.5f", num);
-				eText3.setText(s);
-	
-				num = Double.parseDouble(eText1.getText()) * 3.281;
-				s = String.format("%.5f", num);
-				eText4.setText(s);
-				
-				num = Double.parseDouble(eText1.getText()) / 9.461e+15;
-				s = String.valueOf(num);
-				eText6.setText(s);
-				
-				num = Double.parseDouble(eText1.getText()) * 100;
-				s = String.format("%.5f", num);
-				eText7.setText(s);
-			}
-			if(e.getSource() == eText6)
-			{
-				num = Double.parseDouble(eText6.getText()) * 9.461e+15;
-				s = String.valueOf(num);
-				eText1.setText(s);
-				
-				num = Double.parseDouble(eText1.getText()) / 1000;
-				s = String.format(format, num);
-				eText2.setText(s);
-				
-				num = Double.parseDouble(eText1.getText()) / 1609;
-				s = String.format(format, num);;
-				eText3.setText(s);
-	
-				num = Double.parseDouble(eText1.getText()) * 3.281;
-				s = String.format(format, num);
-				eText4.setText(s);
-				
-				num = Double.parseDouble(eText1.getText()) * 39.37;
-				s = String.format(format, num);
-				eText5.setText(s);
-				
-				num = Double.parseDouble(eText1.getText()) * 100;
-				s = String.format(format, num);
-				eText7.setText(s);
-			}
-			if(e.getSource() == eText7)
-			{
-				num = Double.parseDouble(eText7.getText()) / 100;
-				s = String.format("%.6f", num);
-				eText1.setText(s);
-				
-				num = Double.parseDouble(eText1.getText()) / 1000;
-				s = String.format("%.6f", num);
-				eText2.setText(s);
-				
-				num = Double.parseDouble(eText1.getText()) / 1609;
-				s = String.format("%.6f", num);
-				eText3.setText(s);
-	
-				num = Double.parseDouble(eText1.getText()) * 3.281;
-				s = String.format("%.6f", num);
-				eText4.setText(s);
-				
-				num = Double.parseDouble(eText1.getText()) * 39.37;
-				s = String.format("%.6f", num);
-				eText5.setText(s);
-				
-				num = Double.parseDouble(eText1.getText()) / 9.461e+15;
-				s = String.valueOf(num);
-				eText6.setText(s);
-			}
-			
-		
-			
-		////////////////////////////////////////////////	
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			//Events for the mass tab
-			
-			if(e.getSource() == eText8)
-			{
-				num2 = Double.parseDouble(eText8.getText()) / 2.205;
-				s = String.format(format ,num2);
-				eText9.setText(s);
-				
-				num2 = Double.parseDouble(eText8.getText()) * 454;
-				s = String.format(format ,num2);
-				eText10.setText(s);
-				
-				num2 = Double.parseDouble(eText8.getText()) * 16;
-				s = String.format(format ,num2);
-				eText11.setText(s);
-				
-				num2 = Double.parseDouble(eText8.getText()) * 453592;
-				s = String.format(format ,num2);
-				eText12.setText(s);
-				
-				num2 = Double.parseDouble(eText8.getText()) * 4.536e+8;
-				s = String.format(format ,num2);
-				eText13.setText(s);
-				
-			}
-			if(e.getSource() == eText9)
-			{
-				num2 = Double.parseDouble(eText9.getText()) * 2.205;
-				s = String.format(format ,num2);
-				eText8.setText(s);
-				
-				num2 = Double.parseDouble(eText9.getText()) * 1000;
-				s = String.format(format ,num2);
-				eText10.setText(s);
-				
-				num2 = Double.parseDouble(eText8.getText()) * 16;
-				s = String.format(format ,num2);
-				eText11.setText(s);
-				
-				num2 = Double.parseDouble(eText8.getText()) * 453592;
-				s = String.format(format ,num2);
-				eText12.setText(s);
-				
-				num2 = Double.parseDouble(eText8.getText()) * 4.536e+8;
-				s = String.format(format ,num2);
-				eText13.setText(s);
-				
-			}
-			if(e.getSource() == eText10)
-			{
-				num2 = Double.parseDouble(eText10.getText()) / 454;
-				s = String.format(format ,num2);
-				eText8.setText(s);
-				
-				num2 = Double.parseDouble(eText8.getText()) / 2.205;
-				s = String.format(format ,num2);
-				eText9.setText(s);
-				
-				num2 = Double.parseDouble(eText8.getText()) * 16;
-				s = String.format(format ,num2);
-				eText11.setText(s);
-				
-				num2 = Double.parseDouble(eText8.getText()) * 453592;
-				s = String.format(format ,num2);
-				eText12.setText(s);
-				
-				num2 = Double.parseDouble(eText8.getText()) * 4.536e+8;
-				s = String.format(format ,num2);
-				eText13.setText(s);
-				
-			}
-			if(e.getSource() == eText11)
-			{
-				num2 = Double.parseDouble(eText11.getText()) / 16;
-				s = String.format(format ,num2);
-				eText8.setText(s);
-				
-				num2 = Double.parseDouble(eText8.getText()) / 2.205;
-				s = String.format(format ,num2);
-				eText9.setText(s);
-				
-				num2 = Double.parseDouble(eText8.getText()) * 454;
-				s = String.format(format ,num2);
-				eText10.setText(s);
-				
-				num2 = Double.parseDouble(eText8.getText()) * 453592;
-				s = String.format(format ,num2);
-				eText12.setText(s);
-				
-				num2 = Double.parseDouble(eText8.getText()) * 4.536e+8;
-				s = String.format(format ,num2);
-				eText13.setText(s);
-				
-			}
-			if(e.getSource() == eText12)
-			{
-				num2 = Double.parseDouble(eText12.getText()) / 453592;
-				s = String.format("%.10f" ,num2);
-				eText8.setText(s);
-				
-				num2 = Double.parseDouble(eText8.getText()) / 2.205;
-				s = String.format("%.10f" ,num2);
-				eText9.setText(s);
-				
-				num2 = Double.parseDouble(eText8.getText()) * 454;
-				s = String.format("%.10f" ,num2);
-				eText10.setText(s);
-				
-				num2 = Double.parseDouble(eText8.getText()) * 16;
-				s = String.format("%.10f" ,num2);
-				eText11.setText(s);
-				
-				num2 = Double.parseDouble(eText8.getText()) * 4.536e+8;
-				s = String.format("%.10f" ,num2);
-				eText13.setText(s);
-				
-			}
-			if(e.getSource() == eText13)
-			{
-				num2 = Double.parseDouble(eText13.getText()) / 4.536e+8;
-				s = String.format("%.10f" ,num2);
-				eText8.setText(s);
-				
-				num2 = Double.parseDouble(eText8.getText()) / 2.205;
-				s = String.format("%.10f" ,num2);
-				eText9.setText(s);
-				
-				num2 = Double.parseDouble(eText8.getText()) * 454;
-				s = String.format("%.10f" ,num2);
-				eText10.setText(s);
-				
-				num2 = Double.parseDouble(eText8.getText()) * 16;
-				s = String.format("%.10f" ,num2);
-				eText11.setText(s);
-				
-				num2 = Double.parseDouble(eText8.getText()) * 453592;
-				s = String.format("%.10f" ,num2);
-				eText12.setText(s);
-				
-			}
-			
-	
 		}
 
 		@Override
